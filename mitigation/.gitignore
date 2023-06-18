@@ -1,0 +1,18 @@
+*.swp
+
+# Compiled Object files
+obj/
+build/
+
+# Compiled target executable files
+ramulator
+
+.vscode/
+
+doc/
+*.log
+
+cputraces/
+results/
+run_cmds/
+run.sh

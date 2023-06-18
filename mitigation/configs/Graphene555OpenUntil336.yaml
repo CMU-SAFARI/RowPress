@@ -1,0 +1,124 @@
+version: 1.0
+
+stats:
+  prefix: ddr4
+  suffix: stats
+
+processor:
+  tick: 5
+  trace:
+    - ./cputraces/429.mcf
+    # - ./cputraces/short.trace
+    # - ./cputraces/short.trace
+    # - ./cputraces/short.trace
+    # Specify more traces for multicore multi-programmed workload
+    # - ./cputraces/403.gcc
+    # - ./cputraces/429.mcf
+    # - ./cputraces/444.namd
+
+  ipc: 4
+  depth: 128
+
+  cache:
+    L3:
+      capacity: 8MB
+      latency: 31
+
+  early_exit: True
+  # time_limit: leave empty or set to 0 to disable
+  # time_limit takes precedence over all other limits
+  # time_limit: 64000000 # stop executing after 64 million nanoseconds
+  expected_limit_insts: 100000000
+  warmup_insts: 0
+
+memory:
+  tick: 2
+  period: 0.625
+  standard: DDR4
+  spec:
+    org: 
+      preset: DDR4_8Gb_x8
+      Ch: 1
+      Ra: 2
+    speed:
+      preset: DDR4_3200W
+      # Override timing constraints here
+      # tRCD: 12.5
+      # tRAS: 32
+      # tRP: 12.5
+      # tWR: 15
+      refresh: 1X
+    power:
+      VDD: 1.2
+      VPP: 2.5
+
+      IDD0:  60
+      IPP0:  3
+      IDD2N: 50
+      IPP2N: 3
+      IDD3N: 55
+      IPP3N: 3
+      IDD4W: 145
+      IPP4W: 3
+      IDD4R: 145
+      IPP4R: 3
+      IDD5B: 362
+      IPP5B: 48
+      
+  controller:
+    addr_mapper:
+      type: Linear
+      mapping: MOP4CLXOR
+    scheduler:
+      type: FRFCFS_CAP
+      cap: 16
+    row_policy: 
+      type: Opened
+      # timeout: 120
+    refresh:
+      type: Generic
+    record_cmd_trace: False
+    print_cmd_trace: False
+    cmd_trace_prefix: "TEST"
+    track_activation_count: False
+    close_after_nticks: 537
+    activation_count_dump_file: "activate_dump.txt"
+    otherq_max: 1024 # size of the otherq, needs to be large for preventive refreshes
+    #refresh_based_defense:
+      # type: PARA
+      # probability_threshold: 0.1
+      # debug: True
+      # type: Graphene
+      # no_table_entries: 1024
+      # activation_threshold: 10
+      # reset_period: 64000000
+      # debug: True
+      # debug_verbose: False
+  translation:
+    type: LessRandom
+  
+
+post_warmup_settings:
+  memory:
+    controller:
+      track_activation_count: False
+      refresh_based_defense:
+        # type: PARA
+        # probability_threshold: 0.01
+        # debug: False
+        # rowpress: False
+        type: Graphene # configured for a RTH of 1K, and k = 100
+        no_table_entries: 3684
+        activation_threshold: 184
+        reset_period: 32000000
+        debug: False
+        debug_verbose: False
+        rowpress: False
+        # type: SSRD
+        # row_address_index_bits: [1,5,9,13]
+        # timeout_cycles: 250
+        # probability_multiplier: 0.9
+        # probability_divider: 1.11111
+        # probability_lower_limit: 0.5
+        # debug: False
+        # debug_verbose: False
