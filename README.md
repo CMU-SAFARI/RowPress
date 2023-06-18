@@ -3,6 +3,10 @@ This repository provides all the necessary files and instructions to reproduce t
 
 > Haocong Luo, Ataberk Olgun, Abdullah Giray Yaglikci, Yahya Can Tugrul, Steve Rhyner, M. Banu Cavlak, Joel Lindegger, Mohammad Sadrosadati, and Onur Mutlu, "RowPress: Amplifying Read Disturbance in Modern DRAM Chips", ISCA'23.
 
+ISCA'23 Lightning Talk [Video (3 minutes)](https://youtu.be/R3VKbbbWMnY)
+
+ISCA'23 Lightning Talk Slides [(pptx)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-lightning-talk.pptx) [(pdf)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-lightning-talk.pdf)
+
 Please use the following citation to cite RowPress if the repository is useful for you.
 ```
 @inproceedings{luo2023rowpress,
