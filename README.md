@@ -25,7 +25,7 @@ This repository consists of three parts:
 We provide the source code of our characterization program, a python script to drive the characterization experiments, and a set of scripts and a Jupyter notebook to analyze and plot the results.
 
 ## Prerequisite
-The real DRAM chip characterization of RowPress is based on the open-source FPGA-based DRAM characterization infrastructure [DRAM Bender](https://github.com/CMU-SAFARI/DRAM-Bender). Please check out and follow the installation instructions of [DRAM Bender](https://github.com/CMU-SAFARI/DRAM-Bender).
+Real DRAM chip characterization of RowPress is based on the open-source FPGA-based DRAM characterization infrastructure [DRAM Bender](https://github.com/CMU-SAFARI/DRAM-Bender). Please check out and follow the installation instructions of [DRAM Bender](https://github.com/CMU-SAFARI/DRAM-Bender).
 
 The software dependencies for the characterization are:
 - GNU Make, CMake 3.10+
