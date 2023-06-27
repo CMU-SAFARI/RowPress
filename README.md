@@ -5,6 +5,8 @@ This repository provides all the necessary files and instructions to reproduce t
 
 ISCA'23 Lightning Talk [Video (3 minutes)](https://youtu.be/R3VKbbbWMnY)
 
+ISCA'23 Full Talk [Video (14 minutes)](https://www.youtube.com/watch?v=PMM_XuLDFFo)
+
 ISCA'23 Lightning Talk Slides [(pptx)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-lightning-talk.pptx) [(pdf)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-lightning-talk.pdf)
 
 ISCA'23 Full Talk Slides [(pptx)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-talk.pptx) [(pdf)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-talk.pdf)
