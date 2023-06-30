@@ -11,6 +11,8 @@ ISCA'23 Lightning Talk Slides [(pptx)](https://people.inf.ethz.ch/omutlu/pub/Row
 
 ISCA'23 Full Talk Slides [(pptx)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-talk.pptx) [(pdf)](https://people.inf.ethz.ch/omutlu/pub/RowPress_isca23-talk.pdf)
 
+ISCA 2023 Distinguished Artifact Award [News](https://safari.ethz.ch/isca-distinguished-artifact-award-for-rowpress/)
+
 Please use the following citation to cite RowPress if the repository is useful for you.
 ```
 @inproceedings{luo2023rowpress,
