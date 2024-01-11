@@ -283,7 +283,7 @@ int do_samsung_utrr(uintptr_t target, int no_aggr_acts, int no_reads, int victim
         }
 
 
-        // =================== HAMMER ====================================
+        // =================== HAMMER ALGO 1 ============================
 
         // For each iteration, activate & read with the specified amount; and refresh again
         for (int j = 0 ; j < iteration_per_victim ; j++)
@@ -603,6 +603,8 @@ int verify_tAggOn(uintptr_t target)
 
 void physical_address_hammer(bool is_verify, int victim_count)
 {
+    std::cout << "Running Algorithm 1..." << std::endl;
+    
     // Allocate a large contiguous chunk of memory
     ulong MEM_SIZE = 1ULL << 30ULL;
     volatile char *start_address = (volatile char *) 0x2000000000;
