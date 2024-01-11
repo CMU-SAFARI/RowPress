@@ -13,6 +13,8 @@ ISCA'23 Full Talk Slides [(pptx)](https://people.inf.ethz.ch/omutlu/pub/RowPress
 
 ISCA'23 Distinguished Artifact Award [News](https://safari.ethz.ch/isca-distinguished-artifact-award-for-rowpress/)
 
+ he [extended version](https://arxiv.org/abs/2306.17061) of our paper provide even more results and analysis of RowPress.
+
 Please use the following citation to cite RowPress if the repository is useful for you.
 ```
 @inproceedings{luo2023rowpress,
@@ -138,7 +140,7 @@ This builds the executable `demon` in `demonstration/`.
 Note that the root privilege is only used for the hugepage.
 ### Step 2: Run the demonstration program for bitflips
 ```
-  $ sudo ./demo --num_victims 1500 > bitflips.txt
+  $ sudo ./demo-algo1 --num_victims 1500 > bitflips.txt
 ```
 Bitflip records will be saved to `bitflips.txt`.
 ### Step 3: Process the results
@@ -155,10 +157,16 @@ Open the `real_system_bitflips.ipynb` Jupyter notebook and execute all cells to 
 ```
 ### Step 1: Run the demonstration program for verifying the increase in row open time
 ```
-  $ sudo ./demo --verify
+  $ sudo ./demo-algo1 --verify
 ```
 ### Step 2: Analyze and plot the results
 Open the `real_system_analyze.ipynb` Jupyter notebook and execute all cells.
+
+### Inducing Even More Bitflips with Algorithm 2 Described in Appendix G
+We describe a variant of our proof-of-concept real system demonstration program in Appendix G of the [extended version](https://arxiv.org/abs/2306.17061) of our paper that induces many more bitflips in many more DRAM rows. To run this version of the demonstration program, change the executable in the above steps from `demo-algo1` to `demo-algo2`, i.e.,
+```
+  $ sudo ./demo-algo2 --num_victims 1500 > bitflips.txt
+```
 
 # Mitigation
 ## Prerequisite
